@@ -18,6 +18,10 @@ header, main, footer {
     text-align: center;
 }
 
+header p {
+    font-size: 14px;
+}
+
 .logo {
     width: 120px;
     margin-top: 70px;
@@ -43,13 +47,11 @@ header, h1, main h2 {
     margin-bottom: 70px;
 }
 
-h1, h2 {
+h1, h2, p {
     color: #000000cc;
 }
 
-main h2 span {
-    color: #e0344b;
-}
+
 
 .form h2 {
     text-align: right;
@@ -89,10 +91,44 @@ form button {
     font-weight: bold;
 }
 
+main h2 span {
+    color: #e0344b;
+}
 main .donors {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+.blood {
+    color: #ff4f4f;
+    font-weight: bold;
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    
+    
+}
+
+.blood::before {
+    content: "";
+    background-color: #ff4f4f11;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    transform: rotate(-45deg);
+}
+
+.donors p {
+    margin-top: 24px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 
 footer {
     margin-top: auto;
