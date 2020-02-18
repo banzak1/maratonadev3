@@ -18,6 +18,11 @@ header, main, footer {
     text-align: center;
 }
 
+.logo {
+    width: 120px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
 header, .form, main{
     margin: 0 auto 70px;
     width: 90%;
@@ -29,7 +34,7 @@ header button {
     padding: 8px 16px;
     border-radius: 4px;
     border: none;
-    background-color: #ff4f4f;
+    background-color: #e0344b;
     color: white;
     font-weight: bold;
 }
@@ -38,8 +43,12 @@ header, h1, main h2 {
     margin-bottom: 70px;
 }
 
+h1, h2 {
+    color: #000000cc;
+}
+
 main h2 span {
-    color: red;
+    color: #e0344b;
 }
 
 .form h2 {
@@ -53,7 +62,7 @@ section.form {
     grid-template-columns: 1fr 1fr;
     gap: 45px;
     align-items: center;
-    background-color: #ff4f4f;
+    background-color: #e0344b;
     padding: 16px 64px; 
     border-radius: 6px;
 }
