@@ -4,7 +4,6 @@ const server = express();
 
 
 //configurando servidor para apresentar arquivos estaticos
-
 server.use(express.static('public'))
 
 
@@ -18,7 +17,6 @@ nunjucks.configure("./", {
 //confirgurar apresentação da pagina
 server.get("/", function(req, res) {
     return res.render("index.html")
-
 })
 
 server.listen(3000)
