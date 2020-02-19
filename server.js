@@ -34,7 +34,7 @@ nunjucks.configure("./", {
 
 
 //confirgurar apresentação da pagina
-server.get('*', function(req, res) {
+server.get("/", function(req, res) {
 
     db.query("SELECT * FROM donors", function(err, result) {
         if (err) return res.send("Erro de banco de dados")
