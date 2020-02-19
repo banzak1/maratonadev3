@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doe Sangue! Doe Vida!</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/public/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 
 
@@ -16,7 +16,7 @@
     <header>
         <img 
         class="logo"
-        src="/logo.png" 
+        src="/public/logo.png" 
         alt="DOE">
         <h2>A sua doação importa!</h2>
         <p>Até 3 vidas com uma doação</p>
@@ -28,7 +28,7 @@
 
     <section class="form hide">
         <h2>Entre na lista de doadores</h2>
-        <form action="/">
+        <form action="/" method="POST">
             <input 
             type="text" 
             name="name"
@@ -52,43 +52,21 @@
     <main>
         <h2>Últimos <span>Doadores</span></h2>
         <section class="donors">
-            <div class="donor">
-                <div class="blood">
-                    A+
-                </div>
-                <p>Leonardo Santana</p>
 
-            </div>
-            <div class="donor">
-                <div class="blood">
-                    B+
-                    
-                </div>
-                <p>Robson Marques</p>
+            {% for donor in donors %}
 
-            </div>
-            <div class="donor">
-                <div class="blood">
-                    O+
-                    
+                <div class="donor">
+                    <div class="blood">{{donor.blood}}</div>
+                    <p>{{donor.name}}</p>
                 </div>
-                <p>Diego Fernandes</p>
 
-            </div>
-            <div class="donor">
-                <div class="blood">
-                    AB-
-                    
-                </div>
-                <p>Jéssica Regina</p>
-
-            </div>
+            {%endfor%}
         </section>
     </main>
     <footer>
         Com ❤ Banzak 
     </footer>
-    <script src="/scripts.js"></script>
+    <script src="/public/scripts.js"></script>
 </body>
 
 </html>
